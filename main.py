@@ -1,4 +1,6 @@
 from tkinter import *
+import tkinter.scrolledtext as scrolledtext
+
 BACKGROUND = "#FAF1E6"
 first_key_press = 0
 user_can_type = True
@@ -47,8 +49,9 @@ window.geometry("1500x1000")
 title = Label(text="---Dangerous Typing Prompt---", font="Times 40", bg=BACKGROUND)
 title.grid(row=0, column=0)
 
-text = Text(font="Times 22", bg="#FDFAF6", height=20, padx=20, pady=3)
+text = scrolledtext.ScrolledText(font="Times 22", bg="#FDFAF6", height=20, padx=20, pady=3)
 text.grid(row=1, column=0, padx=20, pady=20)
+
 
 timer = Label(text="Time: 7 sec", font="Times 30", bg=BACKGROUND)
 timer.grid(row=4, column=0)
